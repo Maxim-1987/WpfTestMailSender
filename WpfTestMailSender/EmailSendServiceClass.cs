@@ -13,7 +13,7 @@ namespace WpfTestMailSender
 
         }
 
-        public static void sendEmail(string LoginEdit, SecureString PasswordEdit)
+        public static void sendEmail(string LoginEdit, SecureString PasswordEdit, string Subject, string Text)
         {
             var client = new SmtpClient(Variables.smtpServer, Variables.port);
             client.EnableSsl = true;
@@ -24,8 +24,8 @@ namespace WpfTestMailSender
 
             var message = new MailMessage(from, to);
 
-            message.Subject = Variables.subject;
-            message.Body = Variables.text;
+            message.Subject =Subject + DateTime.Now;
+            message.Body = Text + DateTime.Now;
 
             try
             {

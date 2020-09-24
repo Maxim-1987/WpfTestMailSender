@@ -14,7 +14,7 @@ namespace WpfTestMailSender
 
         private void OnSendButtonClick(object sender, RoutedEventArgs e)
         {
-            EmailSendServiceClass.sendEmail(LoginEdit.Text, PasswordEdit.SecurePassword);
+            EmailSendServiceClass.sendEmail(LoginEdit.Text, PasswordEdit.SecurePassword, Subject.Text, Text.Text);
         }
     }
 }
