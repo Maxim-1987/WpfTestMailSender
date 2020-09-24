@@ -5,9 +5,9 @@ using System.Windows;
 
 namespace WpfTestMailSender
 {
-    public partial class MainWindow : Window
+    public partial class WpfMailSender : Window
     {
-        public MainWindow()
+        public WpfMailSender()
         {
             InitializeComponent();
         }
