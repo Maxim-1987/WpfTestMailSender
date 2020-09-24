@@ -13,16 +13,16 @@ namespace WpfTestMailSender
         }
 
         private void OnSendButtonClick(object sender, RoutedEventArgs e)
-        {
-            var to = new MailAddress("shmachilin@gmail.com", "Павел");
-            var from = new MailAddress("shmachilin@yandex.ru", "Павел");
+        {            
+            var to = new MailAddress(Variables.toAddress, Variables.toName);
+            var from = new MailAddress(Variables.fromAddress, Variables.fromName);
 
             var message = new MailMessage(from, to);
 
-            message.Subject = "Заголовок письма от " + DateTime.Now;
-            message.Body = "Текст тестового письма + " + DateTime.Now;
+            message.Subject = Variables.subject;
+            message.Body = Variables.text;
 
-            var client = new SmtpClient("smtp.yandex.ru", 25);
+            var client = new SmtpClient(Variables.smtpServer, Variables.port);
             client.EnableSsl = true;
 
             client.Credentials = new NetworkCredential
