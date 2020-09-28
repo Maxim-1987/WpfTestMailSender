@@ -12,9 +12,14 @@ namespace WpfTestMailSender
             InitializeComponent();
         }
 
-        private void OnSendButtonClick(object sender, RoutedEventArgs e)
+        //private void OnSendButtonClick(object sender, RoutedEventArgs e)
+        //{
+        //    EmailSendServiceClass.sendEmail(LoginEdit.Text, PasswordEdit.SecurePassword, Subject.Text, Text.Text);
+        //}
+
+        private void miClose_Click(object sender, RoutedEventArgs e)
         {
-            EmailSendServiceClass.sendEmail(LoginEdit.Text, PasswordEdit.SecurePassword, Subject.Text, Text.Text);
+            this.Close();
         }
     }
 }

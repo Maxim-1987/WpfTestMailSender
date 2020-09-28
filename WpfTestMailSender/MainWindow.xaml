@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:WpfTestMailSender"
         mc:Ignorable="d"
         Title="WpfMailSender" Height="450" Width="800">
-    <Grid>
-        <Button Content="Отправить" HorizontalAlignment="Left" Height="55" Margin="315,264,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.444,1.273" Click="OnSendButtonClick"/>
+    <DockPanel>
+        <!--<Button Content="Отправить" HorizontalAlignment="Left" Height="55" Margin="315,264,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.444,1.273" Click="OnSendButtonClick"/>
         <TextBox Name="LoginEdit" HorizontalAlignment="Left" Height="20" Margin="140,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" RenderTransformOrigin="0.5,0.5"/>
         <PasswordBox Name="PasswordEdit" HorizontalAlignment="Left" Height="20" Margin="485,129,0,0" VerticalAlignment="Top" Width="210" RenderTransformOrigin="0.5,0.5"/>
         <TextBlock HorizontalAlignment="Left" Margin="184,84,0,0" Text="Имя пользователя" TextWrapping="Wrap" VerticalAlignment="Top"/>
@@ -15,6 +15,30 @@
         <TextBox Name="Subject" HorizontalAlignment="Left" Margin="140,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" RenderTransformOrigin="0.512,2.508"/>
         <TextBox Name="Text" HorizontalAlignment="Left" Margin="485,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
         <Label Content="Название письма" HorizontalAlignment="Left" Margin="175,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.553,0.387" Width="120"/>
-        <Label Content="Текст письма" HorizontalAlignment="Left" Margin="492,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,-0.114" Width="98"/>
-    </Grid>
+        <Label Content="Текст письма" HorizontalAlignment="Left" Margin="492,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,-0.114" Width="98"/>-->
+
+        <Menu DockPanel.Dock="Top" Margin="0,0,0,10">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть"/>
+                <MenuItem Header="Создать"/>
+                <MenuItem Header="Сохранить"/>
+                <MenuItem Name="miClose" Header="Закрыть" Click="miClose_Click"/>
+            </MenuItem>
+        </Menu>
+        <TabControl>
+            <TabItem Header="Списки">
+                
+            </TabItem>
+            <TabItem Header="Планировщик">
+                
+            </TabItem>
+            <TabItem Header="Письма">
+
+            </TabItem>
+            <TabItem Header="Статистика">
+
+            </TabItem>
+
+        </TabControl>
+    </DockPanel>
 </Window>
