@@ -4,7 +4,7 @@ using System.Net.Mail;
 using System.Windows;
 using System.Security;
 
-namespace WpfTestMailSender
+namespace WpfTestMailSender.lib
 {
     class EmailSendServiceClass
     {

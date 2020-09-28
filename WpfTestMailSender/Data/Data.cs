@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using WpfTestMailSender.Models;
+using WpfTestMailSender.lib.Service;
 
 
 namespace WpfTestMailSender.Data
@@ -30,7 +31,7 @@ namespace WpfTestMailSender.Data
            {
                Address = $"smtp.server{i}.com",
                Login = $"Login-{i}",
-               //Password = TextEncoder.Encode($"Password-{i}"),
+               Password = TextEncoder.Encode($"Password-{i}"),
                UseSSL = i % 2 == 0
            })
            .ToList();

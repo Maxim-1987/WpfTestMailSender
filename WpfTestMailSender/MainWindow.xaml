@@ -209,7 +209,7 @@
                             </GroupBox>
                             <GroupBox Header="Тело письма">
                                 <TextBox AcceptsReturn="True" TextWrapping="Wrap"
-                                         Text="{Binding SelectedItem.Body, ElementName=MessagesList}"/>
+                                         Text="{Binding SelectedItem.Text, ElementName=MessagesList}"/>
                             </GroupBox>
                         </DockPanel>
                     </GroupBox>
