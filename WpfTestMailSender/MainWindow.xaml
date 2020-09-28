@@ -109,7 +109,7 @@
                                         <Setter Property="Background" Value="White"/>
                                     </Style>
                                 </StackPanel.Resources>
-                                <Button Content="Отправить"/>
+                                <Button Content="Отправить" />
                                 <!--Click="OnSendButtonClick"/>-->
                                 <Button Content="Запланировать"/>
                             </StackPanel>
