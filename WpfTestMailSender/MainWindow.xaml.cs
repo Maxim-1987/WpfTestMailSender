@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Mail;
 using System.Windows;
+using WpfTestMailSender.Models;
 
 namespace WpfTestMailSender
 {
