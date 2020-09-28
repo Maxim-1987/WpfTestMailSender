@@ -93,8 +93,8 @@
                                   VerticalGridLinesBrush="Gray">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" MinWidth="30"/>
-                                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding Name}"/>
-                                <DataGridTextColumn Header="Адрес" MinWidth="160" Binding="{Binding Address}"/>
+                                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding toName}"/>
+                                <DataGridTextColumn Header="Адрес" MinWidth="160" Binding="{Binding toAddress}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </GroupBox>
