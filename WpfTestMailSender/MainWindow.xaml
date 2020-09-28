@@ -10,16 +10,6 @@
         mc:Ignorable="d"
         Title="WpfMailSender" Height="450" Width="800">
     <DockPanel>
-        <!--<Button Content="Отправить" HorizontalAlignment="Left" Height="55" Margin="315,264,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.444,1.273" Click="OnSendButtonClick"/>
-        <TextBox Name="LoginEdit" HorizontalAlignment="Left" Height="20" Margin="140,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" RenderTransformOrigin="0.5,0.5"/>
-        <PasswordBox Name="PasswordEdit" HorizontalAlignment="Left" Height="20" Margin="485,129,0,0" VerticalAlignment="Top" Width="210" RenderTransformOrigin="0.5,0.5"/>
-        <TextBlock HorizontalAlignment="Left" Margin="184,84,0,0" Text="Имя пользователя" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Label Content="Пароль" HorizontalAlignment="Left" Margin="492,79,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="Subject" HorizontalAlignment="Left" Margin="140,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" RenderTransformOrigin="0.512,2.508"/>
-        <TextBox Name="Text" HorizontalAlignment="Left" Margin="485,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
-        <Label Content="Название письма" HorizontalAlignment="Left" Margin="175,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.553,0.387" Width="120"/>
-        <Label Content="Текст письма" HorizontalAlignment="Left" Margin="492,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,-0.114" Width="98"/>-->
-
         <Menu DockPanel.Dock="Top" Margin="0,0,0,10">
             <MenuItem Header="Файл">
                 <MenuItem Header="Открыть"/>
@@ -28,8 +18,8 @@
                 <MenuItem Name="miClose" Header="Закрыть" Click="miClose_Click"/>
             </MenuItem>
         </Menu>
-        <TabControl>
-            <TabItem Header="Списки">
+        <TabControl x:Name="tc">
+            <TabItem Header="Списки" TabIndex="0">
                 <DockPanel>
                     <ToolBarTray DockPanel.Dock="Top">
                         <ToolBar Header="Сервера" Band="0" BandIndex="0">
@@ -71,7 +61,7 @@
                             </Button>
                         </ToolBar>
                         <ToolBar Header="Перейти в планировщик" Band="0" >
-                            <Button fa:Awesome.Content="Regular_Clock" Foreground="DimGray" />
+                            <Button fa:Awesome.Content="Regular_Clock" Foreground="DimGray" Click="GoScheduler_Click" />
                         </ToolBar>
                         <ToolBar Header="Получатели" Band="1">
                             <Button ToolTip="Добавить">
@@ -99,15 +89,16 @@
                         </DataGrid>
                     </GroupBox>
                 </DockPanel>
-                
+
             </TabItem>
-            <TabItem Header="Планировщик">
+            <TabItem  Header="Планировщик" TabIndex="1">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="179"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <GroupBox Grid.Column="0" Header="Управление">
+                    <GroupBox Grid.Column="0" Header="Управление" Grid.ColumnSpan="2">
                         <StackPanel>
                             <TextBlock Text="Календарь" TextAlignment="Center"/>
                             <Calendar/>
@@ -124,7 +115,7 @@
                             </StackPanel>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox Grid.Column="1" Header="Задания">
+                    <GroupBox Grid.Column="2" Header="Задания">
                         <ListBox>
                             <ListBox.ItemContainerStyle>
                                 <Style TargetType="ListBoxItem">
@@ -189,20 +180,24 @@
                             </ListBoxItem>
                         </ListBox>
                     </GroupBox>
-                    <GridSplitter Grid.Column="0" HorizontalAlignment="Right" Width="3" Background="Transparent" ShowsPreview="True"/>
+                    <GridSplitter Grid.Column="1" HorizontalAlignment="Left" Width="3" Background="Transparent" ShowsPreview="True" Margin="176,0,0,0"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Письма">
+            <TabItem Header="Письма" TabIndex="2">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" MinWidth="200" MaxWidth="400"/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="12" MaxWidth="400"/>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="68"/>
+                        <ColumnDefinition Width="22*"/>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="537*"/>
                     </Grid.ColumnDefinitions>
-                    <GroupBox Grid.Column="0" Header="Список писем">
+                    <GroupBox Grid.Column="0" Header="Список писем" Grid.ColumnSpan="3">
                         <ListBox Name="MessagesList" ItemsSource="{x:Static data:Data.Messages}" 
                                  DisplayMemberPath="Subject"/>
                     </GroupBox>
-                    <GroupBox Grid.Column="1" Header="Редактор">
+                    <GroupBox Grid.Column="3" Header="Редактор" Grid.ColumnSpan="3">
                         <DockPanel>
                             <GroupBox Header="Заголовок" DockPanel.Dock="Top">
                                 <TextBox Text="{Binding SelectedItem.Subject, ElementName=MessagesList, UpdateSourceTrigger=PropertyChanged}"/>
@@ -215,7 +210,7 @@
                     </GroupBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Статистика">
+            <TabItem Header="Статистика" TabIndex="3">
                 <Grid Margin="10">
                     <Grid.Resources>
                         <Style TargetType="TextBlock">
