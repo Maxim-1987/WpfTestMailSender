@@ -13,16 +13,16 @@ namespace WpfTestMailSender.Data
         public static List<Sender> Senders { get; } = Enumerable.Range(1, 10)
            .Select(i => new Sender
            {
-               fromName = $"Отправитель {i}",
-               fromAddress = $"sender_{i}@server.ru"
+               FromName = $"Отправитель {i}",
+               FromAddress = $"sender_{i}@server.ru"
            })
            .ToList();
 
         public static List<Recipient> Recipients { get; } = Enumerable.Range(1, 10)
            .Select(i => new Recipient
            {
-               toName = $"Получатель {i}",
-               toAddress = $"recipient_{i}@server.ru"
+               ToName = $"Получатель {i}",
+               ToAddress = $"recipient_{i}@server.ru"
            })
            .ToList();
 

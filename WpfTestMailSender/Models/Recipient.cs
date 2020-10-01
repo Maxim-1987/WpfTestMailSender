@@ -6,7 +6,7 @@ namespace WpfTestMailSender.Models
 {
     class Recipient
     {
-        public string toAddress { get; set; }
-        public string toName { get; set; }
+        public string ToAddress { get; set; }
+        public string ToName { get; set; }
     }
 }
