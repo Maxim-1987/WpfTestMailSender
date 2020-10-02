@@ -8,7 +8,7 @@ using WpfTestMailSender.lib.Service;
 
 namespace WpfTestMailSender.Data
 {
-    class Data
+    class TestData
     {
         public static List<Sender> Senders { get; } = Enumerable.Range(1, 10)
            .Select(i => new Sender
