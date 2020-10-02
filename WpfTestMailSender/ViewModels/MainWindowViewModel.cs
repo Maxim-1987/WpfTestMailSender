@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using WpfTestMailSender.Data;
 using WpfTestMailSender.Infrastructure.Commands;
@@ -180,7 +181,7 @@ namespace WpfTestMailSender.ViewModels
         }
 
         #endregion
-
+        
         #endregion
 
         public MainWindowViewModel(IMailService MailService)
