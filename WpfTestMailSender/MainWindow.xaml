@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WpfTestMailSender"
         xmlns:data="clr-namespace:WpfTestMailSender.Data"
         xmlns:m="clr-namespace:WpfTestMailSender.Models"
+        xmlns:v="clr-namespace:WpfTestMailSender.Views"
         xmlns:fa="http://schemas.fontawesome.com/icons/"
         mc:Ignorable="d"
         DataContext="{Binding MainWindowModel, Source={StaticResource Locator}}"
@@ -98,20 +99,9 @@
                                     ToolTip="Удалить"/>
                         </ToolBar>
                     </ToolBarTray>
-                    <GroupBox Header="Список получателей">
-                        <DataGrid Name="RecipientsList" ItemsSource="{Binding Recipients}"
-                                  SelectedItem="{Binding SelectedRecipient}"
-                                  AutoGenerateColumns="False"
-                                  GridLinesVisibility="Vertical"
-                                  AlternatingRowBackground="LightBlue"
-                                  VerticalGridLinesBrush="Gray">
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="ID" MinWidth="30"/>
-                                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding ToName}"/>
-                                <DataGridTextColumn Header="Адрес" MinWidth="160" Binding="{Binding ToAddress}"/>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </GroupBox>
+                    <Grid>
+                        <v:RecipientsView/>
+                    </Grid>
                 </DockPanel>
             </TabItem>
             <TabItem TabIndex="1" Header="Планировщик">
