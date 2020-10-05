@@ -175,7 +175,7 @@ namespace WpfTestMailSender.ViewModels
             var message = SelectedMessage;
 
             var mail_sender = _MailService.GetSender(server.Address, server.Port, server.UseSSL, server.Login, server.Password);
-            mail_sender.Send(sender.FromAddress, recipient.ToAddress, message.Subject, message.Text);
+            mail_sender.Send(sender.Address, recipient.Address, message.Subject, message.Text);
 
             Statistic.MessageSended();
         }

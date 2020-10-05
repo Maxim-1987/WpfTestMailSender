@@ -68,9 +68,7 @@
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate DataType="m:Sender">
                                         <StackPanel Orientation="Horizontal">
-                                            <TextBlock Text="{Binding FromName}" ToolTip="{Binding FromAddress}"/>
-                                            <!--<TextBlock>:</TextBlock>
-                                            <TextBlock Text="{Binding Address}" Opacity="0.4"/>-->
+                                            <TextBlock Text="{Binding Name}" ToolTip="{Binding Address}"/>
                                         </StackPanel>
                                     </DataTemplate>
                                 </ComboBox.ItemTemplate>
