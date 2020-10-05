@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WpfTestMailSender.lib.Models.Base;
 
 namespace WpfTestMailSender.lib.Models
 {
-    public class Server
+    public class Server: NamedEntity
     {
         public string Address { get; set; }
 

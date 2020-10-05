@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WpfTestMailSender.lib.Models.Base;
 
 namespace WpfTestMailSender.lib.Models
 {
-    public class Recipient
+    public class Recipient:Person
     {
-        public string Address { get; set; }
-        public string Name { get; set; }
+        
     }
 }
