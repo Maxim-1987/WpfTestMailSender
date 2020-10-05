@@ -6,7 +6,7 @@ using System.Windows.Input;
 using WpfTestMailSender.Data;
 using WpfTestMailSender.Infrastructure.Commands;
 using WpfTestMailSender.lib.Interfaces;
-using WpfTestMailSender.Models;
+using WpfTestMailSender.lib.Models;
 using WpfTestMailSender.ViewModels.Base;
 
 

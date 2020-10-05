@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WpfTestMailSender.Models
+namespace WpfTestMailSender.lib.Models
 {
-    class Server
+    public class Server
     {
         public string Address { get; set; }
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace WpfTestMailSender.Models
+namespace WpfTestMailSender.lib.Models
 {
-    class Message
+    public class Message
     {
         public string Subject { get; set; }
         public string Text  { get; set; }

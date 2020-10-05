@@ -4,7 +4,7 @@ using System.Net.Mail;
 using System.Windows;
 using System.Windows.Controls;
 using WpfTestMailSender.lib;
-using WpfTestMailSender.Models;
+using WpfTestMailSender.lib.Models;
 
 namespace WpfTestMailSender
 {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-using WpfTestMailSender.Models;
+using WpfTestMailSender.lib.Models;
 using WpfTestMailSender.lib.Service;
 
 

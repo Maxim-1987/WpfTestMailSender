@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTestMailSender"
         xmlns:data="clr-namespace:WpfTestMailSender.Data"
-        xmlns:m="clr-namespace:WpfTestMailSender.Models"
+        xmlns:models="clr-namespace:WpfTestMailSender.lib.Models;assembly=MailSender.lib"
         xmlns:v="clr-namespace:WpfTestMailSender.Views"
         xmlns:fa="http://schemas.fontawesome.com/icons/"
         mc:Ignorable="d"
